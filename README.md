@@ -4,7 +4,7 @@
 
 Dockerfile to be used by ci/cd tools (like Jenkins), built from an alpine based image containing all necessary cli tools to interact with K8s and AWS EKS.
 
-## 1.15.0 Tools versions matrix
+## 1.15.1 Tools versions matrix
 
 | Tool  | Version  |
 |---|---|

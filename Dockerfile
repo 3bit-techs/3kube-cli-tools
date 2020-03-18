@@ -15,7 +15,7 @@ ENV EKSCTL_VERSION 0.15.0
 
 RUN addgroup -S 3bit -g 1000 && adduser -S 3bit -G 3bit -u 1000
 
-RUN apk add -U --no-cache python3 ca-certificates git curl make openssl \
+RUN apk add -U --no-cache python3 ca-certificates git curl make openssl openssh \
     && pip3 install --no-cache-dir --upgrade pip \
     && pip3 --no-cache-dir install awscli==${AWSCLI_VERSION}
 
