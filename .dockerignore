@@ -1,0 +1,9 @@
+.terraform
+tfstate
+tfplan
+.git
+*.zip
+*.tar.gz
+*.tar.xz
+target
+node_modules
