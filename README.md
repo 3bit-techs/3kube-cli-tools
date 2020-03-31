@@ -10,7 +10,7 @@ Dockerfile to be used by ci/cd tools (like Jenkins), built from an alpine based 
 |---|---|
 | AWSCLI | 1.16.310 |
 | HELM | 3.1.2 |
-| HELM | 0.12.23 |
+| TERRAFORM | 0.12.23 |
 | CONFTEST | 0.18.0 |
 | TFLINT | 0.15.2 |
 | KUBECTL | 1.15.0 |
