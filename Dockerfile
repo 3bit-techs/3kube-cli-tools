@@ -12,6 +12,7 @@ ENV JQ_VERSION 1.6
 ENV FLUXCTL_VERSION 1.18.0
 ENV YQ_VERSION 3.2.1
 ENV EKSCTL_VERSION 0.15.0
+ENV SOPS_VERSION 3.5.0
 
 RUN addgroup -S 3bit -g 1000 && adduser -S 3bit -G 3bit -u 1000
 
@@ -59,6 +60,10 @@ RUN curl -sL -o eksctl.tar.gz https://github.com/weaveworks/eksctl/releases/down
      && tar -xf eksctl.tar.gz eksctl && rm -f eksctl.tar.gz \
      && install -g 3bit -o 3bit -m=+xrw eksctl /usr/local/bin \
      && rm -f eksctl
+
+RUN curl -sL -o sops https://github.com/mozilla/sops/releases/download/v${SOPS_VERSION}/sops-v${SOPS_VERSION}.linux \
+     && install -g 3bit -o 3bit -m=+xrw sops /usr/local/bin \
+     && rm -f sops
 
 USER 3bit
 
