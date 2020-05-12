@@ -3,7 +3,7 @@ FROM alpine:3.10
 LABEL maintainer="https://github.com/3bit-techs"
 
 ENV AWSCLI_VERSION 1.18.52
-ENV HELM_VERSION 3.1.3
+ENV HELM_VERSION 3.2.1
 ENV TERRAFORM_VERSION 0.12.24
 ENV CONFTEST_VERSION 0.18.2
 ENV TFLINT_VERSION 0.15.2
@@ -25,7 +25,7 @@ RUN curl -sL -o tflint.zip https://github.com/terraform-linters/tflint/releases/
      && install -g 3bit -o 3bit -m=+xrw tflint /usr/local/bin \
      && rm -f tflint
 
-RUN curl -sL -o conftest.tar.gz https://github.com/instrumenta/conftest/releases/download/v0.18.0/conftest_${CONFTEST_VERSION}_Linux_x86_64.tar.gz \
+RUN curl -sL -o conftest.tar.gz https://github.com/instrumenta/conftest/releases/download/v${CONFTEST_VERSION}/conftest_${CONFTEST_VERSION}_Linux_x86_64.tar.gz \
      && tar -xf conftest.tar.gz conftest && rm -f conftest.tar.gz \
      && install -g 3bit -o 3bit -m=+xrw conftest /usr/local/bin \
      && rm -f conftest
