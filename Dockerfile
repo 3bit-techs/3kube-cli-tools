@@ -65,6 +65,7 @@ RUN curl -sL -o sops https://github.com/mozilla/sops/releases/download/v${SOPS_V
      && install -g 3bit -o 3bit -m=+xrw sops /usr/local/bin \
      && rm -f sops
 
+RUN chmod 777 -R /home/3bit
 USER 3bit
 
 ENV HOME /home/3bit
