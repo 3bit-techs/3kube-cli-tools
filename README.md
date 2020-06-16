@@ -49,7 +49,7 @@ Dockerfile to be used by ci/cd tools (like Jenkins), built from an alpine based 
 | EKSCTL | 0.16.0 |
 | SOPS | 3.5.0 |
 
-## 1.16.2 Tools versions matrix
+## 1.16.2 |1.16.3 Tools versions matrix
 
 | Tool  | Version  |
 |---|---|
