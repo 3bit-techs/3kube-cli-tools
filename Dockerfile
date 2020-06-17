@@ -13,6 +13,7 @@ ENV FLUXCTL_VERSION 1.19.0
 ENV YQ_VERSION 3.2.1
 ENV EKSCTL_VERSION 0.16.0
 ENV SOPS_VERSION 3.5.0
+ENV VELERO_VERSION 1.4.0
 
 RUN addgroup -S 3bit -g 1000 && adduser -S 3bit -G 3bit -u 1000
 
@@ -64,6 +65,11 @@ RUN curl -sL -o eksctl.tar.gz https://github.com/weaveworks/eksctl/releases/down
 RUN curl -sL -o sops https://github.com/mozilla/sops/releases/download/v${SOPS_VERSION}/sops-v${SOPS_VERSION}.linux \
      && install -g 3bit -o 3bit -m=+xrw sops /usr/local/bin \
      && rm -f sops
+
+RUN curl -sL -o velero.tar.gz https://github.com/vmware-tanzu/velero/releases/download/v${VELERO_VERSION}/velero-v${VELERO_VERSION}-linux-amd64.tar.gz \
+     && tar -xf velero.tar.gz velero-v${VELERO_VERSION}-linux-amd64/velero && rm -f velero.tar.gz \
+     && install -g 3bit -o 3bit -m=+xrw velero-v${VELERO_VERSION}-linux-amd64/velero /usr/local/bin \
+     && rm -rf velero-v${VELERO_VERSION}-linux-amd64/velero
 
 RUN chmod 777 -R /home/3bit
 USER 3bit

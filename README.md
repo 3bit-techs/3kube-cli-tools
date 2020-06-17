@@ -6,6 +6,9 @@ Dockerfile to be used by ci/cd tools (like Jenkins), built from an alpine based 
 
 ## Changelog
 
+*1.16.6*
+* Added support for VMWare VELERO 1.4.0
+
 *1.16.5*
 * Downgrade TFLINT from 1.16.2 to 1.15.2 because it contains breaking changes
 
@@ -16,6 +19,23 @@ Dockerfile to be used by ci/cd tools (like Jenkins), built from an alpine based 
 
 *1.16.3*
 * Added support for multiple uid
+
+## 1.16.6 Tools versions matrix
+
+| Tool  | Version  |
+|---|---|
+| AWSCLI | 1.18.52 |
+| HELM | 3.2.6 |
+| TERRAFORM | 0.12.26 |
+| CONFTEST | 0.18.2 |
+| TFLINT | 0.15.2 |
+| KUBECTL | 1.16.9 |
+| JQ | 1.6 |
+| FLUXCTL | 1.19.0 |
+| YQ | 3.2.1 |
+| EKSCTL | 0.16.0 |
+| SOPS | 3.5.0 |
+| VELERO | 1.4.0 |
 
 ## 1.16.5 Tools versions matrix
 
