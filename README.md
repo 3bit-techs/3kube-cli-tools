@@ -6,6 +6,9 @@ Dockerfile to be used by ci/cd tools (like Jenkins), built from an alpine based 
 
 ## Changelog
 
+*1.18.2*
+* Upgrade TERRAFORM 0.12.26 -> 0.14.3
+
 *1.18.1*
 * Added support for Kubernetes 1.18
 
@@ -29,7 +32,7 @@ Dockerfile to be used by ci/cd tools (like Jenkins), built from an alpine based 
 |---|---|
 | AWSCLI | 1.18.52 |
 | HELM | 3.2.6 |
-| TERRAFORM | 0.12.26 |
+| TERRAFORM | 0.14.3 |
 | CONFTEST | 0.18.2 |
 | TFLINT | 0.15.2 |
 | KUBECTL | 1.18.10 |
